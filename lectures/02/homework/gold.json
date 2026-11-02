@@ -1,0 +1,146 @@
+{
+  "料金は？": {
+    "needs_review": false,
+    "must_include": [
+      "500 円",
+      "料金"
+    ]
+  },
+  "1時間あたりの利用料金を教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "500 円",
+      "料金"
+    ]
+  },
+  "コワーキングスペースの料金体系を教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "500 円",
+      "料金"
+    ]
+  },
+  "営業時間は？": {
+    "needs_review": false,
+    "must_include": [
+      "9:00",
+      "21:00",
+      "平日"
+    ]
+  },
+  "営業時間を教えてもらえますか": {
+    "needs_review": false,
+    "must_include": [
+      "9:00",
+      "21:00",
+      "平日"
+    ]
+  },
+  "平日の開店時間と閉店時間は何時ですか": {
+    "needs_review": false,
+    "must_include": [
+      "9:00",
+      "21:00",
+      "平日"
+    ]
+  },
+  "飲食は？": {
+    "needs_review": false,
+    "must_include": [
+      "軽食",
+      "持ち込み"
+    ]
+  },
+  "スペース内での飲食に関するルールを教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "軽食",
+      "持ち込み"
+    ]
+  },
+  "軽食の持ち込みは許可されていますか": {
+    "needs_review": false,
+    "must_include": [
+      "軽食",
+      "持ち込み"
+    ]
+  },
+  "登録の手続きは？": {
+    "needs_review": false,
+    "must_include": [
+      "身分証明書",
+      "会員登録"
+    ]
+  },
+  "初めて利用する際に必要な持ち物や登録の流れを教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "身分証明書",
+      "会員登録"
+    ]
+  },
+  "登録手続きには何を持っていけばよいですか": {
+    "needs_review": false,
+    "must_include": [
+      "身分証明書",
+      "会員登録"
+    ]
+  },
+  "貸出備品は？": {
+    "needs_review": false,
+    "must_include": [
+      "プロジェクター",
+      "無料"
+    ]
+  },
+  "無料でレンタルできる機材にはどのようなものがありますか": {
+    "needs_review": false,
+    "must_include": [
+      "プロジェクター",
+      "無料"
+    ]
+  },
+  "プロジェクターの貸し出しサービスはありますか": {
+    "needs_review": false,
+    "must_include": [
+      "プロジェクター",
+      "無料"
+    ]
+  },
+  "月額の使い放題プランはありますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "イベントスペースとして貸し切ることはできますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "シャワールームは完備されていますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "学割などの割引制度はありますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "通話やWeb会議が可能な専用ブースはありますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "コピー機やプリンターは利用できますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  }
+}
