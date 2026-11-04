@@ -8,6 +8,7 @@ import json
 import random
 from functools import cache
 from pathlib import Path
+from datetime import datetime
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 MAX_RESULTS = 3
@@ -99,3 +100,20 @@ def make_quiz(lecture: int) -> str:
         {"question": f"「{entry['term']}」の意味は？", "answer": entry["definition"]},
         ensure_ascii=False,
     )
+
+
+def save_learning_log(topic: str, note: str) -> str:
+    """ユーザーの学習ログを保存する。
+    ユーザーから学習内容の記録を求められたときに使う。
+    topic: 学習内容のトピック
+    note: 学習内容の詳細
+    """
+    day = datetime.now().isoformat(timespec='seconds')
+    repo_dir = Path(__file__).resolve().parent.parent
+    log_dir = repo_dir / "learning_log"
+    log_dir.mkdir(exist_ok=True)
+    log_file = log_dir / "log.jsonl"
+    with open(log_file, "a", encoding="utf-8") as f:
+        json.dump({"topic": topic, "note": note, "day": day}, f, ensure_ascii=False)
+        f.write("\n")
+    return f"学習ログを保存しました: {log_file.relative_to(repo_dir)}, topic: {topic}, note: {note}, day: {day}"
