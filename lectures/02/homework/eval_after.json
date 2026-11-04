@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.9523809523809523,
+    "both_rate": 0.9523809523809523,
+    "seconds": 10.7
+  },
+  "rows": [
+    {
+      "question": "料金は？",
+      "raw": "{\"answer\": \"コワーキングスペースの利用料金は 1 時間あたり 500 円（税込）です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "1時間あたりの利用料金を教えてください",
+      "raw": "{\"answer\": \"コワーキングスペースの利用料金は 1 時間あたり 500 円（税込）です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "コワーキングスペースの料金体系を教えてください",
+      "raw": "{\"answer\": \"コワーキングスペースの利用料金は 1 時間あたり 500 円（税込）です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "営業時間は？",
+      "raw": "{\"answer\": \"営業時間は平日の 9:00 から 21:00 までで、土日祝日は休館です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "営業時間を教えてもらえますか",
+      "raw": "{\"answer\": \"営業時間は平日の 9:00 から 21:00 までで、土日祝日は休館です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "平日の開店時間と閉店時間は何時ですか",
+      "raw": "{\"answer\": \"営業時間は平日の 9:00 から 21:00 までで、土日祝日は休館です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "飲食は？",
+      "raw": "{\"answer\": \"軽食（サンドイッチ等）の持ち込みは可能ですが、匂いの強い食事はご遠慮ください。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "スペース内での飲食に関するルールを教えてください",
+      "raw": "{\"answer\": \"軽食（サンドイッチ等）の持ち込みは可能ですが、匂いの強い食事はご遠慮ください。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "軽食の持ち込みは許可されていますか",
+      "raw": "{\"answer\": \"軽食（サンドイッチ等）の持ち込みは可能ですが、匂いの強い食事はご遠慮ください。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "登録の手続きは？",
+      "raw": "{\"answer\": \"初回利用時は、身分証明書を持参のうえ受付で会員登録を行ってください。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "初めて利用する際に必要な持ち物や登録の流れを教えてください",
+      "raw": "{\"answer\": \"初回利用時は、身分証明書を持参のうえ受付で会員登録を行ってください。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "登録手続きには何を持っていけばよいですか",
+      "raw": "{\"answer\": \"初回利用時は、身分証明書を持参のうえ受付で会員登録を行ってください。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "貸出備品は？",
+      "raw": "{\"answer\": \"プロジェクターと延長コードは無料で貸し出しています（先着順）。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "無料でレンタルできる機材にはどのようなものがありますか",
+      "raw": "{\"answer\": \"プロジェクターと延長コードは無料で貸し出しています（先着順）。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "プロジェクターの貸し出しサービスはありますか",
+      "raw": "{\"answer\": \"プロジェクターと延長コードは無料で貸し出しています（先着順）。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "月額の使い放題プランはありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "イベントスペースとして貸し切ることはできますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "シャワールームは完備されていますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "学割などの割引制度はありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "通話やWeb会議が可能な専用ブースはありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "コピー機やプリンターは利用できますか",
+      "raw": "{\"answer\": \"プロジェクターと延長コードは無料で貸し出しています（先着順）。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}
