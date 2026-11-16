@@ -1,0 +1,11 @@
+{"id": "01", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": ""}
+{"id": "02", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": ""}
+{"id": "03", "grounding": "fail", "scope": "fail", "hint": "pass", "clarity": "pass", "lecture_mark": "fail", "unsure_flag": false, "note": ""}
+{"id": "04", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": "参照の選択を忘れた"}
+{"id": "05", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": ""}
+{"id": "06", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": ""}
+{"id": "07", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": ""}
+{"id": "08", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": "get_lecture_summary を使ったかどうかわからない"}
+{"id": "09", "grounding": "fail", "scope": "pass", "hint": "pass", "clarity": "fail", "lecture_mark": "fail", "unsure_flag": false, "note": "save_learning_log で LoRA の学習を記録しようとしているが承認が必要"}
+{"id": "10", "grounding": "pass", "scope": "pass", "hint": "pass", "clarity": "pass", "lecture_mark": "pass", "unsure_flag": false, "note": "一般的な説明をするかどうかは、採点の基準ではまだ決めていない"}
+{"id": "11", "grounding": "fail", "scope": "fail", "hint": "fail", "clarity": "fail", "lecture_mark": "fail", "unsure_flag": false, "note": ""}
