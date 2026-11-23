@@ -22,6 +22,9 @@ RAG_TOP_K = 5
 GRAPH_START_K = 3
 GRAPH_HOPS = 2
 GRAPH_MAX_RESULTS = 10
+# 宿題（発展）: 各ページから「別の講義資料で最も意味が近いページ」へ張る有向の線の本数。
+# 0 なら追加しない（改良前と同じ動き）。例: AIE_GRAPH_SIMILAR_K=0 uv run python -m app.agent --graph ...
+GRAPH_SIMILAR_K = int(os.getenv("AIE_GRAPH_SIMILAR_K", "1"))
 EMBEDDING_MODEL = "gemini-embedding-001"
 EMBEDDING_DIMENSIONS = 768
 # 2,048トークンの上限に対し、タスク指定等の分を残す。超過時は切り捨てず停止する。
