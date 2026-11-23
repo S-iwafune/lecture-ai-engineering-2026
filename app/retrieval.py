@@ -17,7 +17,7 @@ import sqlite_vec
 from app.config import (
     EMBEDDING_DIMENSIONS, EMBEDDING_MAX_TOKENS, EMBEDDING_MODEL,
     RAG_DB, RAG_DOCUMENT_IDS, RAG_SOURCE, RAG_TOP_K, RAG_TREE, get_api_key,
-    RAG_GRAPH, GRAPH_START_K, GRAPH_HOPS, GRAPH_MAX_RESULTS,
+    RAG_GRAPH, GRAPH_START_K, GRAPH_HOPS, GRAPH_MAX_RESULTS, GRAPH_SIMILAR_K,
 )
 
 
@@ -138,18 +138,49 @@ def search(query: str) -> list[dict]:
         return [dict(row) for row in rows]
 
 
+def similar_cross_edges(page_ids: set[str], k: int = GRAPH_SIMILAR_K) -> dict[str, list[tuple[str, float]]]:
+    """各ページから、別の講義資料の中で埋め込みが最も近いページk件を返す（有向）。
+
+    同じ資料の中は、ベクトル検索の入口・前後ページ・共通用語で既につながるため、
+    資料をまたぐ近さだけを補う。
+    """
+    if k <= 0:
+        return {}
+    edges = {}
+    with open_index(RAG_DB) as db:
+        for page_id in sorted(page_ids):
+            rows = db.execute("""
+                SELECT page_id, vec_distance_cosine(
+                           embedding, (SELECT embedding FROM chunks WHERE page_id = ?)) AS distance
+                FROM chunks
+                WHERE page_id != ?
+                  AND document_id != (SELECT document_id FROM chunks WHERE page_id = ?)
+                ORDER BY distance, page_id LIMIT ?
+            """, (page_id, page_id, page_id, k)).fetchall()
+            edges[page_id] = [(row["page_id"], row["distance"]) for row in rows if row["page_id"] in page_ids]
+    return edges
+
+
 def search_graph(query: str) -> dict:
-    """ベクトル検索を入口に、前後ページと共通用語で候補を広げる。"""
+    """ベクトル検索を入口に、前後ページ・共通用語・資料をまたぐ意味の近さで候補を広げる。"""
     pages = {page["page_id"]: page for page in load_pages(RAG_SOURCE)}
     graph = json.loads(RAG_GRAPH.read_text(encoding="utf-8"))
     nodes = {node["id"]: node for node in graph["nodes"]
              if node["kind"] == "term" or node["id"] in pages}
     adjacent = defaultdict(set)
+    relation_of = {}  # (出発, 到着) → 関係名。経路にどの線を通ったかを残す。
     for edge in graph["edges"]:
         a, b = edge["source"], edge["target"]
         if edge["relation"] in ("next_page", "mentions") and a in nodes and b in nodes:
             adjacent[a].add(b)
             adjacent[b].add(a)
+            relation_of.setdefault((a, b), edge["relation"])
+            relation_of.setdefault((b, a), edge["relation"])
+    # 宿題（発展）: 別の資料で最も近いページへの有向の線（逆向きは張らない）。
+    for a, neighbors in similar_cross_edges(set(pages)).items():
+        for b, _distance in neighbors:
+            adjacent[a].add(b)
+            relation_of.setdefault((a, b), "similar_cross")
 
     seeds = [hit for hit in search(query) if hit["page_id"] in pages][:min(GRAPH_START_K, GRAPH_MAX_RESULTS)]
     seed_ids = {seed["page_id"] for seed in seeds}
@@ -177,7 +208,9 @@ def search_graph(query: str) -> dict:
                 frequency = max((len(adjacent[n]) for n in route if nodes[n]["kind"] == "term"), default=0)
                 priority = (len(route) - 1, frequency, rank, neighbor)
                 candidate = {**pages[neighbor], "hops": len(route) - 1,
-                             "path": [{"id": n, "title": nodes[n]["title"]} for n in route]}
+                             "path": [{"id": n, "title": nodes[n]["title"],
+                                       **({"via": relation_of[(route[i - 1], n)]} if i else {})}
+                                      for i, n in enumerate(route)]}
                 if neighbor not in candidates or priority < candidates[neighbor][0]:
                     candidates[neighbor] = (priority, candidate)
     expanded = [candidate for _, candidate in sorted(candidates.values())]
